@@ -4,10 +4,9 @@
     {
         static void Main(string[] args)
         {
-            string A = "test1";
-            string B = "test2";
-            bool C = A != B;
-            Console.WriteLine(C);
+            int A, B;
+            double X, Y;
+            bool C = A < B | X > Y;
         }
     }
 }
