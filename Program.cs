@@ -6,7 +6,7 @@
         {
             string A = "test1";
             string B = "test2";
-            bool C = A == B;
+            bool C = A != B;
             Console.WriteLine(C);
         }
     }
