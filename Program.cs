@@ -6,14 +6,14 @@
         {
             Console.WriteLine("Введите своё имя: ");
             var name = Console.ReadLine();
+            string nameReverse = "";
 
-            Console.WriteLine("Ваше имя по буквам");
-            foreach (var word in name)
+            Console.WriteLine("Ваше имя в обратном порядке");
+            for (int i = name.Length - 1; i >=0; i--)
             {
-                Console.Write(word + " ");
+                nameReverse += name[i];
             }
-            Console.WriteLine();
-            Console.WriteLine("Последняя буква вашего имени: {0}", name[name.Length - 1]);
+            Console.WriteLine(nameReverse);
 
             //int t = 0;
             //do
