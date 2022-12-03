@@ -4,16 +4,11 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Введите своё имя: ");
-            var name = Console.ReadLine();
-            string nameReverse = "";
-
-            Console.WriteLine("Ваше имя в обратном порядке");
-            for (int i = name.Length - 1; i >=0; i--)
+            int[,] array = { { 1, 2, 3 }, { 4, 5, 6 } };
+            foreach(int i in array)
             {
-                nameReverse += name[i];
+                Console.Write(i + " ");
             }
-            Console.WriteLine(nameReverse);
 
             //int t = 0;
             //do
