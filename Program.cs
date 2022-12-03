@@ -4,19 +4,16 @@
     {
         static void Main(string[] args)
         {
-            var arr = new int[] {2,6,3,-3,6,9,10,56,3,2,1 };
-            int minValue = int.MaxValue,
-                minIndex = -1;
+            Console.WriteLine("Введите своё имя: ");
+            var name = Console.ReadLine();
 
-            for (int i = 0; i < arr.Length; i++)
+            Console.WriteLine("Ваше имя по буквам");
+            foreach (var word in name)
             {
-                if (arr[i] < minValue)
-                {
-                    minValue = arr[i];
-                    minIndex = i;
-                }
+                Console.Write(word + " ");
             }
-            Console.WriteLine("Наименьший элемент массива {0}, зщначение этого элемента = {1}", minIndex, minValue);
+            Console.WriteLine();
+            Console.WriteLine("Последняя буква вашего имени: {0}", name[name.Length - 1]);
 
             //int t = 0;
             //do
