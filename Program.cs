@@ -4,18 +4,11 @@
     {
         static void Main(string[] args)
         {
-            // Заполнение анкеты питомца в кортеж
-            (string Name, string Type, double Age, int NameCount) Pet;
+            // Анкетирование пользователя
+            
+            (string firstName, string lastName, string login, int loginLenght, bool availablePet, int age, string[] favColor) User;
 
-            Console.Write("Введите имя Вашего питомца: ");
-            Pet.Name = Console.ReadLine();
-            Console.Write("Введите тип питомца(кошка, собака и т.д.): ");
-            Pet.Type = Console.ReadLine();
-            Console.Write("Введите возраст питомца: ");
-            Pet.Age = double.Parse(Console.ReadLine());
-
-            Pet.NameCount = Pet.Name.Length;
-
+           
             Console.WriteLine("Имя вашего питомца: {0}\n" +
                               "Тип питомца: {1}\n" +
                               "Возраст питомца: {2}\n" +
