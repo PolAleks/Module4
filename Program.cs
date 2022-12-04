@@ -4,32 +4,15 @@
     {
         static void Main(string[] args)
         {
-            // Сортировка массива внутри одной строки
+            // Заполнение анкеты плользователя в кортеж
+            (string name, int age) anketa;
 
-            int[,] arr = { { -5, 6, 9, 1, 2, -3 }, { -8, 8, 1, 1, 2, -3 } };
-            int temp;
+            Console.Write("Введите ваше имя: ");
+            anketa.name = (Console.ReadLine());
+            Console.Write("Введите ваш возраст: ");
+            anketa.age = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Ваше имя: {0}\nВаш возраст: {1}", anketa.name, anketa.age);
 
-            for (int i = 0; i < arr.GetUpperBound(0) + 1; i++)
-            {
-                for (int j = 0; j < arr.GetUpperBound(1) + 1; j++)
-                {
-                    for (int k = j + 1; k < arr.GetUpperBound(1) + 1; k++)
-                    {
-                        if (arr[i,j] > arr[i,k])
-                        {
-                            temp = arr[i,j];
-                            arr[i,j] = arr[i,k];
-                            arr[i,k] = temp;
-                        }
-                    }
-                }
-            }
-            for (int i = 0; i < arr.GetUpperBound(0) + 1; i++)
-            {
-                for (int j = 0; j < arr.GetUpperBound(1) + 1; j++)
-                    Console.Write(arr[i, j] + " ");
-                Console.WriteLine();
-            }
             //int t = 0;
             //do
             //{
