@@ -4,13 +4,24 @@
     {
         static void Main(string[] args)
         {
-            int[,] array = { { 1, 2, 3 }, { 4, 5, 6 }, { 7, 8, 9 }, { 10, 11, 12 } };
-
-            for (int i = 0; i < array.GetUpperBound(1) + 1; i++) 
+            int[] array = { 5, 6, 9, 1, 2, 3, 4 };
+            int temp;
+            
+            for (int k = 0; k < array.Length - 1; k++)
             {
-                for (int k = 0; k < array.GetUpperBound(0) + 1; k++)
-                    Console.Write(array[k, i] + " ");
-                Console.WriteLine();
+                for (int i = k + 1; i < array.Length; i++)
+                {
+                    if (array[k] > array[i])
+                    {
+                        temp = array[k];
+                        array[k] = array[i];
+                        array[i] = temp;
+                    }
+                }
+            }
+            foreach (var arr in array)
+            {
+                Console.Write(arr + " ");
             }
             
 
