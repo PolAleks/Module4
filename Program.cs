@@ -4,15 +4,32 @@
     {
         static void Main(string[] args)
         {
-            int[] array = { 5, 6, 9, 1, 2, 3, 4 };
-            int sum = 0;
-            
-            foreach (var arr in array)
-            {
-                sum += arr;
+            int[][] array = new int[3][];
+
+            array[0] = new int[2] { 1, 2 };
+            array[1] = new int[3] { 1, 2, 3 };
+            array[2] = new int[5] { 1, 2, 3, 4, 5 };
+
+            for (int i = 0; i < array.GetUpperBound(0) + 1; i++) 
+            { 
+                for(int k = 0; k < array[i].Length; k++)
+                    Console.Write(array[i][k]);
+                Console.WriteLine();
             }
-            Console.WriteLine(sum);
-            
+
+            // Вариант с использованием foreach
+
+            foreach (var arr in array) {
+                foreach(var item in arr) 
+                    Console.Write(item + " ");
+                Console.WriteLine();
+            }
+
+            // Вариант вывода всего зубчатого массива в одну строку
+
+            foreach(var arr in array)
+                Console.Write(arr + " ");
+                        
 
             //int t = 0;
             //do
