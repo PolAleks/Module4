@@ -4,14 +4,22 @@
     {
         static void Main(string[] args)
         {
-            // Заполнение анкеты плользователя в кортеж
-            (string name, int age) anketa;
+            // Заполнение анкеты питомца в кортеж
+            (string Name, string Type, double Age, int NameCount) Pet;
 
-            Console.Write("Введите ваше имя: ");
-            anketa.name = (Console.ReadLine());
-            Console.Write("Введите ваш возраст: ");
-            anketa.age = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Ваше имя: {0}\nВаш возраст: {1}", anketa.name, anketa.age);
+            Console.Write("Введите имя Вашего питомца: ");
+            Pet.Name = Console.ReadLine();
+            Console.Write("Введите тип питомца(кошка, собака и т.д.): ");
+            Pet.Type = Console.ReadLine();
+            Console.Write("Введите возраст питомца: ");
+            Pet.Age = double.Parse(Console.ReadLine());
+
+            Pet.NameCount = Pet.Name.Length;
+
+            Console.WriteLine("Имя вашего питомца: {0}\n" +
+                              "Тип питомца: {1}\n" +
+                              "Возраст питомца: {2}\n" +
+                              "Длинна имени питомца: {3}", Pet.Name, Pet.Type, Pet.Age, Pet.NameCount);
 
             //int t = 0;
             //do
