@@ -16,6 +16,13 @@
             User.login = Console.ReadLine();
 
             User.loginLenght = User.login.Length;
+
+            Console.WriteLine("Есть ли у вас животные? Да или Нет? ");
+            if(Console.ReadLine() == "Да")
+                User.hasPet = true;
+            else
+                User.hasPet = false;
+            
         }
     }
 }
