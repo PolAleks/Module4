@@ -5,24 +5,13 @@
         static void Main(string[] args)
         {
             int[] array = { 5, 6, 9, 1, 2, 3, 4 };
-            int temp;
+            int sum = 0;
             
-            for (int k = 0; k < array.Length - 1; k++)
-            {
-                for (int i = k + 1; i < array.Length; i++)
-                {
-                    if (array[k] > array[i])
-                    {
-                        temp = array[k];
-                        array[k] = array[i];
-                        array[i] = temp;
-                    }
-                }
-            }
             foreach (var arr in array)
             {
-                Console.Write(arr + " ");
+                sum += arr;
             }
+            Console.WriteLine(sum);
             
 
             //int t = 0;
