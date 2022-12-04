@@ -14,7 +14,8 @@
             User.lastName = Console.ReadLine();
             Console.WriteLine("Введите логин :");
             User.login = Console.ReadLine();
-                                   
+
+            User.loginLenght = User.login.Length;
         }
     }
 }
